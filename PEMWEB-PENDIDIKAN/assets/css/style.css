@@ -83,6 +83,10 @@ body {
     }
 }
 
+.vaku {
+    margin: 10px 210px;
+}
+
 /** Features **/
 .features{
     margin-top: 130px;
