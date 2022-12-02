@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2bilangan</title>
+</head>
+<body>
+       <div>
+        <div>
+         <label> input 1 </label>
+         <input type="number" id="txtinput1" onchange="getjumlah()"/>
+        </div>
+        <div>
+         <label> input 2 </label>
+         <input type="number" id="txtinput2" onchange="getjumlah()"/>
+        </div>
+        <div>
+         <label> Hasil </label>
+         <input type="number" id="txthasil" onchange="getjumlah()"/>
+        </div>
+       </div>
+
+       <script>
+        function getjumlah ()
+        {
+        //deklarasi variable
+         var hasil;
+         var input1;
+         var input2;
+        //  input
+         input1 = parseInt(document .
+         getElementById("txtinput1").
+         value);
+       
+         input2 = parseInt(document .
+         getElementById("txtinput2").
+         value);
+        //  proses
+         hasil = input1 + input2;
+        //  output
+         document.getElementById("txthasil") .value = hasil;
+        }
+       </script>
+</body>
+</html>
