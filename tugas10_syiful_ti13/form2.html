@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: oldlace;
+        }
+
+        header {
+            text-align: center;
+            background-color: moccasin;  
+            
+        }
+
+        .pack {
+            padding: 0.01em 16px;
+        }
+
+        .data-pribadi {
+            text-transform: capitalize;
+        }
+
+        h2 {
+        font-weight: bold; 
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .form-isian ol li {
+            list-style: none;
+            
+        }
+
+        th, td {
+            padding: 12px;
+            width: 200px;
+        }
+
+        .tombol {
+            background: moccasin;
+            color: black;
+            padding:10px 20px;
+            text-decoration:none;
+            font-size:11pt;
+        }
+
+        .notice {
+            color: grey;
+            text-transform: lowercase;
+        }
+    </style>
+
+    <script>
+        function kirim() {
+            let inp_nama = document.getElementById("nama").value;
+            let inp_email = document.getElementById("email").value;
+            let inp_pass = document.getElementById("password").value;
+            let inp_jam = document.getElementById("jam").value;
+            let inp_tujuan = document.getElementById("tujuan").value;
+            let inp_numer = document.getElementById("numer").value;
+            let inp_form = document.getElementById("form");
+
+            if (inp_nama == "0" 
+            || inp_email == "chakdarwis@gamil.com" 
+            || inp_pass == "integrity"
+            || inp_jam == "0"
+            || inp_tujuan == "0"
+            || inp_numer == "0" ) {
+                form.setAttribute("action","dashboard.html");
+                alert("login berhasil");
+            }
+            else{
+                alert("login gagal");
+            }
+}
+    </script>
+
+</head>
+<body>
+    <header class="pack">
+        <h1>
+            Form Registrasi
+        </h1>
+    </header>
+    <form onsubmit="kirim()" id="form">
+        <div class="form-isian">
+            <table>
+                <tr>
+                    <td>
+                        <label for="nama">Nama Lengkap:</label>
+                    </td>   
+                
+                    <td>    
+                        <input id="nama" type="text" 
+                                required placeholder="Min.30 Karakter"
+                                value="" min="3" max="30">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">E-mail:</label>
+                    </td>
+                    <td>
+                        <input id="email" type="email"
+                            required placeholder="chakdarwis@gmail.com">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">password:</label>
+                    </td>
+                    <td>
+                        <input id="password" type="password"
+                            required placeholder="Min.8 Karakter"
+                            aria-valuemin="8">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="jam">Jam Keberangkatan:</label>
+                    </td>
+                    <td>
+                        <input id="jam" type="text" placeholder="00.00 – 23.59">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="tujuan">Tujuan Keberangkatan :</label>
+                    </td>
+                    <td>
+                        <select name="Tujuan" >
+                            <option >Pilih Tujuan</option>
+                            <option id="tujuan" value="Islam">Depok</option>
+                            <option id="tujuan" value="Katolik">Bogor</option>
+                            <option id="tujuan" value="Protestan">Bandung</option>
+                            <option id="tujuan" value="Hindu">Jakarta</option>
+                            <option id="tujuan" value="Buddha">Malang</option>
+                            <option id="tujuan" value="Konghuchu">Garaut</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="numer">Jumlah Tiket :</label>
+                    </td>
+                    <td>
+                        <input id="numer" type="number" placeholder="1 – 10" value="" min="1" max="10">
+                    </td>
+                </tr>
+            </table>
+           
+        </div>
+        <div class="tombol">
+            
+                <!-- <table>
+                    <tr>
+                        <td><label for="username">username</label></td>
+                        <td>:</td>
+                        <td><input type="text" id="username"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">password</label></td>
+                        <td>:</td>
+                        <td><input type="password" id="password"></td>
+                    </tr>
+                </table> -->
+                    <button type="submit">kirim</button>
+            <p class="notice">*setelah melakukan submit anda akan dapat informasi dari email</p>
+        </div>
+    </form>
+</body>
+</html>
