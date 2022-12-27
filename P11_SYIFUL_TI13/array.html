@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 11.1</title>
+    <script>
+        // Membuat array fruits. [kalo array buka tutup kurung siku]
+        let fruits = ['Apel', 'Mangga', 'Jeruk'];
+        console.log(fruits[0] + fruits[1] + fruits[2]);
+
+        // manampilkan semua data array dengan looping for
+        for(let i = 0; i < 4; i++) {
+            console.log(i);
+        }
+
+        console.log()
+        fruits.push('Anggur', 'Durian'); //Untuk menambahkan data pada array
+        fruits.sort() //Untuk mengurut A-Z
+        fruits.reverse() //Untuk mengurut Z-A
+        fruits.pop() //Untuk menghapus data array paling akhir
+
+        for(let i = 0; i < fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+
+        // Object. {klo objek buka tutup kurawal}
+        let mobil = {
+            tipe : 'Turismu',
+            merk : 'Lamborghini',
+            tahun : 2009,
+            warna : 'merah',
+            jalan : function () {
+                console.log('Breeeeeeeemmmm....');
+            },
+        };
+
+        // 1. function biasa
+        // function parkir() {}
+
+        // 2. Anonym function
+        // function() {}
+
+        // 3. Arrow function
+        // function(parkir) {}
+
+        console.log(mobil); //menampilkan semua
+        console.log(mobil.tahun); //manampilkan salah satunya
+
+
+    </script>
+</head>
+<body>
+    <h1>Belajar Array</h1>
+</body>
+</html>
